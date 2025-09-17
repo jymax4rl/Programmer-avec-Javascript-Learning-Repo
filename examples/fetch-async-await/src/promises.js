@@ -1,4 +1,4 @@
-const speed = 100;
+const speed = 2010;
 
 
 const isDangerous = speed > 2000;
