@@ -38,7 +38,19 @@
         function verifyString(stringToVerify) {
             //retourner une promesse, qui vérifie si l'input a la même valeur 
             //que compareString
+            const verif_promise = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (stringToVerify === compareString) {
+                        resolve('verification passed!')
+                    } else {
+                        reject('verification failed')
+                    }
+                }, 2000)
+            });
+
+            return verif_promise;
         }
+
 
         submit.addEventListener('click', () => {
             // Récupère la valeur de l'input
@@ -46,6 +58,15 @@
 
             //appeler la méthode verifyString
             //et faire un alert de la valeur de retour
+            verifyString(inputString)
+                .then(result => {
+                    alert(result);
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+
+
         });
 
     </script>
