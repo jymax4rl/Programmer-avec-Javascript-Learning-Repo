@@ -4,7 +4,7 @@ const isSafe = safe < 4;
 
 const promise01 = new Promise((resolve, reject) => {
     setTimeout(() => {
-        if (isSafe) {
+        if (!isSafe) {
             resolve('First control, result is ' + safe + ':' + ' safety requirements passed!');
         } else {
             reject('First control is ' + safe + ':' + ' safety requirements failed!');
@@ -26,18 +26,11 @@ const promise02 = new Promise((resolve, reject) => {
     }, 4000);
 });
 
-Promise.all([promise01, promise02])
-    .then(results => {
 
-
-        results.forEach(result => console.log('Result:', result));
-        // console.log('Results:', results);
-
-        //console.log('Results:', results[1]); // get the result of the second promise
-
-    })
-    .catch(error => {
-        console.error('One or more promises rejected:', error);
-    }).finally(() => {
-        console.log('safety control done!')
-    });
+Promise.race([promise01, promise02]).then(result => {
+    console.log('Result:', result);
+}).catch(error => {
+    console.error('Error:', error);
+}).finally(() => {
+    console.log('safety control done!')
+});
