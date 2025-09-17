@@ -23,3 +23,18 @@ then() : pour gérer le succès de la promesse,
 catch() : pour gérer les erreurs,
 
 finally() : pour exécuter du code après que la promesse ait été résolue ou rejetée.
+
+
+
+# Les propriétés d’une promesse
+L’objet promise a deux propriétés :
+
+State qui a trois états possibles :
+
+pending : lorsque la promesse est en attente d'une réponse,
+
+fulfilled ou resolved : lorsque la promesse est résolue avec succès et renvoie une valeur,
+
+rejected : lorsque la promesse a échoué et renvoie une erreur,
+
+Result, qui contient la valeur retournée par le développeur en paramètre de resolve() ou reject().
