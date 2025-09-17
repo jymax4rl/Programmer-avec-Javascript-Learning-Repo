@@ -1,3 +1,9 @@
+const maPromesseWaitTime = 2000;
+const maDeuxiemePromessseWaitTime = 4000;
+
+const totalWaitTime = maDeuxiemePromessseWaitTime + maPromesseWaitTime;
+
+
 const maPromesse = new Promise((resolve, reject) => {
 
 
@@ -6,16 +12,16 @@ const maPromesse = new Promise((resolve, reject) => {
 
         // returned resolve after 2 seconds
         resolve("waited 2 seconds")
-    }, 2000)
+    }, maPromesseWaitTime)
 });
 
 const maDeuxiemePromessse = new Promise((resolve, reject) => {
     setTimeout(() => {
 
         // returned resolve after 4 seconds
-        resolve('waited 4 seconds')
-    }, 4000);
-})
+        resolve('waited 4 seconds, ' + totalWaitTime + ' ms au total')
+    }, maDeuxiemePromessseWaitTime + maPromesseWaitTime);
+});
 
 maPromesse.then(succes => {
     console.log(succes)
