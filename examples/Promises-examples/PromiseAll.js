@@ -18,7 +18,7 @@ const promise02 = new Promise((resolve, reject) => {
 
     setTimeout(() => {
 
-        if (isSafe) {
+        if (!isSafe) {
             resolve('Second control, result is ' + safe + ':' + ' safety requirements passed!');
         } else {
             reject('Second control, result is ' + safe + ':' + ' safety requirements failed!');
