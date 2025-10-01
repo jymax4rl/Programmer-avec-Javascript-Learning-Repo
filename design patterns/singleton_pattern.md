@@ -8,7 +8,7 @@ Il est principalement utilisé pour **contrôler l’accès à une ressource par
 - un **fichier de configuration**  
 - un **service global** (logger, gestionnaire d’état, etc.)
 
-[!IMPORTANT]  
+>[!IMPORTANT]  
 L’idée centrale du Singleton est de s’assurer qu’il n’y ait **qu’une seule instance** d’une classe, même si elle est appelée plusieurs fois dans le code.  
 
 ---
