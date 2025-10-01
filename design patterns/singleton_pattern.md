@@ -42,7 +42,7 @@ En utilisant un Singleton, les développeurs s’assurent qu’il n’existe qu�
 ## Inconvénients
 Bien que pratique, le Singleton a aussi des **limitations** :  
 
-[!CAUTION]  
+>[!CAUTION]  
 - Il rend le code **plus difficile à tester et maintenir**, car l’instance unique est partagée partout.  
 - Il limite l’**héritage** : il n’est pas possible de créer des sous-classes avec des instances différentes.  
 
