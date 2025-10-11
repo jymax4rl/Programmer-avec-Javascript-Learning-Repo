@@ -1,6 +1,14 @@
 //Objet TypeScript
-var client = {
-    nom: "Aubergine",
-    tel: 7777777777
-};
-console.log(client.nom);
+var Human = /** @class */ (function () {
+    function Human(name, age, walkSpeed) {
+        this.name = name;
+        this.age = age;
+        this.walkSpeed = walkSpeed;
+    }
+    Human.prototype.walk = function () {
+        console.log("".concat(this.name, " is walking at a speed of ").concat(this.walkSpeed, " km/h"));
+    };
+    return Human;
+}());
+var person = new Human("Imhotep", 30, 5);
+person.walk();

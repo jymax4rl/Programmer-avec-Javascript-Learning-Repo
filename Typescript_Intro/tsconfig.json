@@ -1,9 +1,18 @@
 {
     "compilerOptions": {
-        "target": "ES6", // Version de ECMAScript 6
-        "outDir": "dossierJS", //Nom du dossier de distanciation pour les fichiers JavaScript
+        "target": "ES6", // Version of JavaScript to output
+        "module": "commonjs", // Module system (used by Node.js)
+        "outDir": "dist", // Folder for compiled JS files
+        "rootDir": "src", // Folder containing TypeScript source files
+        "strict": true, // Enable strict type checking
+        "esModuleInterop": true, // Allow default imports from CommonJS modules
+        "forceConsistentCasingInFileNames": true, // Avoid issues on case-sensitive systems
+        "sourceMap": true // Generate .map files to debug TS in browser or VS Code
     },
     "include": [
-        "**.ts" // Type de fichier à compiler
+        "src/**/*.ts" // Compile all .ts files in /src and subfolders
+    ],
+    "exclude": [
+        "node_modules" // Skip dependencies
     ]
 }
