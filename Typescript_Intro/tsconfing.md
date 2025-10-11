@@ -27,3 +27,27 @@ Think of it as the “rules” and “map” for your project’s build process.
     "node_modules"                 // Skip dependencies
   ]
 }
+```
+
+# Real World Folder Structure
+my-typescript-project/
+│
+├── src/               # All your TypeScript files
+│   ├── app.ts
+│   ├── routes/
+│   │   └── users.ts
+│   └── utils/
+│       └── helpers.ts
+│
+├── dist/              # Compiled JS files go here
+│   ├── app.js
+│   ├── routes/
+│   │   └── users.js
+│   └── utils/
+│       └── helpers.js
+│
+├── tsconfig.json
+└── package.json
+
+
+

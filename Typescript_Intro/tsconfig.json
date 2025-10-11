@@ -1,18 +1,44 @@
 {
-    "compilerOptions": {
-        "target": "ES6", // Version of JavaScript to output
-        "module": "commonjs", // Module system (used by Node.js)
-        "outDir": "dist", // Folder for compiled JS files
-        "rootDir": "src", // Folder containing TypeScript source files
-        "strict": true, // Enable strict type checking
-        "esModuleInterop": true, // Allow default imports from CommonJS modules
-        "forceConsistentCasingInFileNames": true, // Avoid issues on case-sensitive systems
-        "sourceMap": true // Generate .map files to debug TS in browser or VS Code
-    },
-    "include": [
-        "src/**/*.ts" // Compile all .ts files in /src and subfolders
-    ],
-    "exclude": [
-        "node_modules" // Skip dependencies
-    ]
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // File Layout
+    // "rootDir": "./src",
+    // "outDir": "./dist",
+
+    // Environment Settings
+    // See also https://aka.ms/tsconfig/module
+    "module": "nodenext",
+    "target": "esnext",
+    "types": [],
+    // For nodejs:
+    // "lib": ["esnext"],
+    // "types": ["node"],
+    // and npm install -D @types/node
+
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Style Options
+    // "noImplicitReturns": true,
+    // "noImplicitOverride": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "noFallthroughCasesInSwitch": true,
+    // "noPropertyAccessFromIndexSignature": true,
+
+    // Recommended Options
+    "strict": true,
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+  }
 }
