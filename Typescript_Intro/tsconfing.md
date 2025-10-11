@@ -30,6 +30,7 @@ Think of it as the “rules” and “map” for your project’s build process.
 ```
 
 # Real World Folder Structure
+```bash
 my-typescript-project/
 │
 ├── src/               # All your TypeScript files
@@ -48,6 +49,7 @@ my-typescript-project/
 │
 ├── tsconfig.json
 └── package.json
+```
 
 
 
