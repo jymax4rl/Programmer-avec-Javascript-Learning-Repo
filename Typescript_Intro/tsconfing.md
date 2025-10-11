@@ -52,7 +52,7 @@ my-typescript-project/
 ```
 
 
->[NOTE] Intro to the TSConfig Reference
+>![NOTE] Intro to the TSConfig Reference
 >
 >A TSConfig file in a directory indicates that the directory is the root of a TypeScript or JavaScript project. The TSConfig file can be either a tsconfig.json or jsconfig.json, both have the same set of config variables.
 >
@@ -66,5 +66,14 @@ The typeAcquisition fields, for tweaking how types are added to JavaScript proje
 
 
 ### <span style="color:blue">If you are starting a TSConfig from scratch, you may want to consider using ```bash tsc --init ``` to bootstrap or use a TSConfig base.</span>
+
+### To compile, run in project root:
+```
+npx tsc -p .
+# or, if typescript is installed globally:
+tsc -p .
+```
+
+### see: https://www.typescriptlang.org/tsconfig/
 
 
